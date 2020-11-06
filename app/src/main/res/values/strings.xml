@@ -1,0 +1,81 @@
+<resources>
+    <!-- HEADER -->
+    <string name="rrm_title">Robertson\'s</string>
+    <string name="rrm_subtitle">The Leading Producer of Ready-Mixed Concrete in the Southern California Area</string>
+
+    <string name="swarm_jks_pass">Concrete1</string>
+    <string name="app_name">RTProduct</string>
+    <string name="enter_a_message">Enter a message</string>
+    <string name="Sand_Selected">Sand Selected</string>
+    <string name="scale_out">Scale Out</string>
+    <string name="textview">TextView</string>
+    <string name="clear">Clear Msg</string>
+    <string name="map">Map</string>
+    <string name ="TimeCardBtn">TimeCard</string>
+    <string name = "Scale_OutBtn">Scale Again</string>
+    <string name = "etMessage">Messages</string>
+    <string name = "ProductBtn1TOFF">Sand</string>
+    <string name = "ProductBtn1TON">Sand Selected</string>
+    <string name = "ProductBtn2TOFF">1 1/2 Rock</string>
+    <string name = "ProductBtn2TON">1 1/2" Selected</string>
+    <string name = "ProductBtn3TOFF">1 inch Rock</string>
+    <string name = "ProductBtn3TON">1" Selected</string>
+    <string name = "ProductBtn4TOFF">3/8" Rock</string>
+    <string name = "ProductBtn4TON">3/8" Selected</string>
+    <string name = "SubmitBtnOFF">Submit</string>
+    <string name = "SubmitBtnON">Submitted</string>
+    <string name = "dialogPasswordET">Enter Password</string>
+    <string name = "dialogLoginBtn">Enter</string>
+    <string name = "dialogCancelBtn">Cancel</string>
+    <string name = "RRMLogo">RRM Logo</string>
+    <string name = "messageBubble">messageBubble</string>
+    <string name = "homebubble">HomeBubble</string>
+    <string name = "timeStampLbl">Scale Time</string>
+    <string name = "sourceLbl"> SRC</string>
+    <string name = "materialLbl">Mat</string>
+    <string name = "weightLbl">Weight</string>
+    <string name ="destinationLbl">Dest</string>
+    <string name = "arvTime">Arrive Time</string>
+    <string name ="APLbl">A.P.</string>
+    <string name ="LPLbl">L.P.</string>
+    <string name ="rateLbl">Rate</string>
+
+
+
+    <string-array name="messageArray">
+        <item>Tap Here for Can Messages</item>
+        <item>Which Product do I pick up?</item>
+        <item>Which Plant do I take it to?</item>
+        <item>Which Quarry do I go back to?</item>
+        <item>Back to Home Plant/Quarry</item>
+        <item>Waiting at the Quarry</item>
+        <item>Broke Down</item>
+        <item>Lunch</item>
+    </string-array>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="iv5" />
+    <string name="bub4" />
+    <string name="Homeicon4" />
+    <string name="reset">Reset</string>
+    <string name="submit">Submit</string>
+    <string name="truck_number">Truck Number</string>
+    <string name="login">Login</string>
+    <string name="employee_number">Employee Number</string>
+    <string name="view1" />
+    <string name="hv5" />
+</resources>

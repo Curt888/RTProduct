@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackgroundEnd"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/homeView5"
+        android:layout_width="961dp"
+        android:layout_height="115dp"
+        android:layout_marginBottom="30dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/header_graphic"
+        app:layout_constraintBottom_toTopOf="@+id/et_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_reset"
+        style="@android:style/Widget.Material.Light.Button"
+        android:layout_width="480dp"
+        android:layout_height="85dp"
+        android:layout_marginEnd="2dp"
+        android:background="@drawable/button_normal"
+        android:text="@string/reset"
+        android:textAllCaps="false"
+        android:textColor="@color/colorGradEnd"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_submit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btn_submit"
+        style="@android:style/Widget.Material.Light.Button"
+        android:layout_width="480dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="2dp"
+        android:background="@drawable/button_normal"
+        android:text="Submit"
+        android:textAllCaps="false"
+        android:textColor="@color/colorGradEnd"
+        android:textSize="30sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_reset"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.529" />
+
+    <TextView
+        android:id="@+id/et_trk_num"
+        android:layout_width="382dp"
+        android:layout_height="71dp"
+        android:layout_marginBottom="184dp"
+        android:ems="10"
+        android:hint="Truck Number"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorWhite"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/et_emp_num"
+        android:layout_width="378dp"
+        android:layout_height="66dp"
+        android:layout_marginBottom="280dp"
+        android:hint="Employee Number"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_red_dark"
+        android:textColorHint="@android:color/holo_red_dark"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/et_login"
+        android:layout_width="382dp"
+        android:layout_height="87dp"
+        android:clickable="false"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Login"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textIsSelectable="false"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.285" />
+
+    <TextView
+        android:id="@+id/versionNumber"
+        android:layout_width="66dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_red_dark"
+        android:textColorLink="@android:color/holo_red_dark"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/btn_submit"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.833" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="-13dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

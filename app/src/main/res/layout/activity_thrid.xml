@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackgroundEnd"
+    tools:context="com.example.rtproduct.ThridActivity">
+
+
+    <ToggleButton
+        android:id="@+id/SubmitBtn"
+        android:layout_width="287dp"
+        android:layout_height="58dp"
+        android:background="@drawable/button_normal"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_red_dark"
+
+        android:textOff="@string/SubmitBtnOFF"
+        android:textOn="@string/SubmitBtnON"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.769" />
+
+    <TextView
+        android:id="@+id/tvWeight"
+        android:layout_width="340dp"
+        android:layout_height="46dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.379" />
+
+    <TextView
+        android:id="@+id/textViewInstructions"
+        android:layout_width="342dp"
+        android:layout_height="51dp"
+        android:ems="10"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.559" />
+
+    <TextView
+        android:id="@+id/tvProduct"
+        android:layout_width="342dp"
+        android:layout_height="51dp"
+        android:ems="10"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.466" />
+
+    <ToggleButton
+        android:id="@+id/ProductBtn1"
+        android:layout_width="240dp"
+        android:layout_height="60dp"
+        android:background="@drawable/button_normal"
+        android:checked="false"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_red_dark"
+        android:textOff="@string/ProductBtn1TOFF"
+        android:textOn="@string/ProductBtn1TON"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ProductBtn2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.992" />
+
+    <ToggleButton
+        android:id="@+id/ProductBtn3"
+        android:layout_width="240dp"
+        android:layout_height="60dp"
+        android:background="@drawable/button_normal"
+        android:textColor="@android:color/holo_red_dark"
+        android:textOff="@string/ProductBtn3TOFF"
+        android:textOn="@string/ProductBtn3TON"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ProductBtn4"
+        app:layout_constraintStart_toEndOf="@+id/ProductBtn2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.992" />
+
+    <ToggleButton
+        android:id="@+id/ProductBtn2"
+        android:layout_width="240dp"
+        android:layout_height="60dp"
+        android:background="@drawable/button_normal"
+        android:textColor="@android:color/holo_red_dark"
+        android:textOff="@string/ProductBtn2TOFF"
+        android:textOn="@string/ProductBtn2TON"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ProductBtn3"
+        app:layout_constraintStart_toEndOf="@+id/ProductBtn1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.992" />
+
+    <ToggleButton
+        android:id="@+id/ProductBtn4"
+        android:layout_width="240dp"
+        android:layout_height="60dp"
+        android:background="@drawable/button_normal"
+        android:checked="false"
+        android:textColor="@android:color/holo_red_dark"
+        android:textOff="@string/ProductBtn4TOFF"
+        android:textOn="@string/ProductBtn4TON"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ProductBtn3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.992" />
+
+    <TextView
+        android:id="@+id/statusLab1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="112dp"
+        android:background="#e9ab90"
+        android:gravity="center_vertical|center_horizontal"
+        android:inputType="textMultiLine"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="961dp"
+        android:layout_height="115dp"
+        android:contentDescription="@string/RRMLogo"
+        android:scaleType="fitXY"
+        android:src="@drawable/header_graphic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/MessageView"
+        android:layout_width="60dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:alpha=".50"
+        android:contentDescription="@string/homebubble"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/home_house" />
+
+    <ImageView
+        android:id="@+id/messageBubble"
+        android:layout_width="60dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:alpha=".50"
+        android:contentDescription="@string/messageBubble"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/MessageView"
+        app:layout_constraintHorizontal_bias="0.979"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/message_bubble" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

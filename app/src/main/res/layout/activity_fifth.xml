@@ -1,0 +1,1019 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.rtproduct.FifthActivity">
+
+    <TextView
+        android:id="@+id/arvTimeLbl"
+        android:layout_width="140dp"
+        android:layout_height="36dp"
+        android:text="@string/arvTime"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/arvtimeET1"
+        app:layout_constraintEnd_toStartOf="@+id/timeStampLbl"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statusLabl" />
+
+    <TextView
+        android:id="@+id/timeStampLbl"
+        android:layout_width="140dp"
+        android:layout_height="36dp"
+        android:text="@string/timeStampLbl"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/timeStampTV1"
+        app:layout_constraintEnd_toStartOf="@+id/sourceLbl"
+        app:layout_constraintStart_toEndOf="@+id/arvTimeLbl"
+        app:layout_constraintTop_toBottomOf="@+id/statusLabl" />
+
+    <TextView
+        android:id="@+id/sourceLbl"
+        android:layout_width="50dp"
+        android:layout_height="36dp"
+        android:text="@string/sourceLbl"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/sourceTV1"
+        app:layout_constraintEnd_toStartOf="@+id/materialLbl"
+        app:layout_constraintStart_toEndOf="@+id/timeStampLbl"
+        app:layout_constraintTop_toBottomOf="@+id/statusLabl" />
+
+    <TextView
+        android:id="@+id/materialLbl"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:text="@string/materialLbl"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/materialTV1"
+        app:layout_constraintEnd_toStartOf="@+id/weightLbl"
+        app:layout_constraintStart_toEndOf="@+id/sourceLbl"
+        app:layout_constraintTop_toBottomOf="@+id/statusLabl" />
+
+    <TextView
+        android:id="@+id/weightLbl"
+        android:layout_width="70dp"
+        android:layout_height="36dp"
+        android:text="@string/weightLbl"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/weightTV1"
+        app:layout_constraintEnd_toStartOf="@+id/destinationLbl"
+        app:layout_constraintStart_toEndOf="@+id/materialLbl"
+        app:layout_constraintTop_toBottomOf="@+id/statusLabl" />
+
+    <TextView
+        android:id="@+id/destinationLbl"
+        android:layout_width="50dp"
+        android:layout_height="36dp"
+        android:text="@string/destinationLbl"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/destinationTV1"
+        app:layout_constraintEnd_toStartOf="@+id/APLbl"
+        app:layout_constraintStart_toEndOf="@+id/weightLbl"
+        app:layout_constraintTop_toBottomOf="@+id/statusLabl" />
+
+    <TextView
+        android:id="@+id/APLbl"
+        android:layout_width="50dp"
+        android:layout_height="36dp"
+        android:text="@string/APLbl"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/APTV1"
+        app:layout_constraintEnd_toStartOf="@+id/LPLbl"
+        app:layout_constraintStart_toEndOf="@+id/destinationLbl"
+        app:layout_constraintTop_toBottomOf="@+id/statusLabl" />
+
+    <TextView
+        android:id="@+id/LPLbl"
+        android:layout_width="50dp"
+        android:layout_height="36dp"
+        android:text="@string/LPLbl"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/LPTV1"
+        app:layout_constraintEnd_toStartOf="@+id/rateLbl"
+        app:layout_constraintStart_toEndOf="@+id/APLbl"
+        app:layout_constraintTop_toBottomOf="@+id/statusLabl" />
+
+    <TextView
+        android:id="@+id/rateLbl"
+        android:layout_width="70dp"
+        android:layout_height="36dp"
+        android:text="@string/rateLbl"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/rateTV1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/LPLbl"
+        app:layout_constraintTop_toBottomOf="@+id/statusLabl" />
+
+    <TextView
+        android:id="@+id/arvtimeET1"
+        android:layout_width="140dp"
+        android:layout_height="36dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="arvTime1"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/arvtimeET2"
+        app:layout_constraintEnd_toStartOf="@+id/timeStampTV1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/arvTimeLbl" />
+
+    <TextView
+        android:id="@+id/timeStampTV1"
+        android:layout_width="140dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/timeStampTV2"
+        app:layout_constraintEnd_toStartOf="@+id/sourceTV1"
+        app:layout_constraintStart_toEndOf="@+id/arvtimeET1"
+        app:layout_constraintTop_toBottomOf="@+id/timeStampLbl" />
+
+    <TextView
+        android:id="@+id/sourceTV1"
+        android:layout_width="50dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/sourceTV2"
+        app:layout_constraintEnd_toStartOf="@+id/materialTV1"
+        app:layout_constraintStart_toEndOf="@+id/timeStampTV1"
+        app:layout_constraintTop_toBottomOf="@+id/sourceLbl" />
+
+    <TextView
+        android:id="@+id/materialTV1"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/materialTV2"
+        app:layout_constraintEnd_toStartOf="@+id/weightTV1"
+        app:layout_constraintStart_toEndOf="@+id/sourceTV1"
+        app:layout_constraintTop_toBottomOf="@+id/materialLbl" />
+
+    <TextView
+        android:id="@+id/weightTV1"
+        android:layout_width="70dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/weightTV2"
+        app:layout_constraintEnd_toStartOf="@+id/destinationTV1"
+        app:layout_constraintStart_toEndOf="@+id/materialTV1"
+        app:layout_constraintTop_toBottomOf="@+id/weightLbl" />
+
+    <TextView
+        android:id="@+id/destinationTV1"
+        android:layout_width="50dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/destinationTV2"
+        app:layout_constraintEnd_toStartOf="@+id/APTV1"
+        app:layout_constraintStart_toEndOf="@+id/weightTV1"
+        app:layout_constraintTop_toBottomOf="@+id/destinationLbl" />
+
+    <EditText
+        android:id="@+id/APTV1"
+        android:layout_width="50dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/APTV2"
+        app:layout_constraintEnd_toStartOf="@+id/LPTV1"
+        app:layout_constraintStart_toEndOf="@+id/destinationTV1"
+        app:layout_constraintTop_toBottomOf="@+id/APLbl" />
+
+    <EditText
+        android:id="@+id/LPTV1"
+        android:layout_width="50dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/LPTV2"
+        app:layout_constraintEnd_toStartOf="@+id/rateTV1"
+        app:layout_constraintStart_toEndOf="@+id/APTV1"
+        app:layout_constraintTop_toBottomOf="@+id/LPLbl" />
+
+    <EditText
+        android:id="@+id/rateTV1"
+        android:layout_width="70dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/rateTV2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/LPTV1"
+        app:layout_constraintTop_toBottomOf="@+id/rateLbl" />
+
+    <TextView
+        android:id="@+id/arvtimeET2"
+        android:layout_width="140dp"
+        android:layout_height="36dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="arvTime2"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/arvtimeET3"
+        app:layout_constraintEnd_toStartOf="@+id/timeStampTV2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/arvtimeET1" />
+
+    <TextView
+        android:id="@+id/timeStampTV2"
+        android:layout_width="140dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/timeStampTV3"
+        app:layout_constraintEnd_toStartOf="@+id/sourceTV2"
+        app:layout_constraintStart_toEndOf="@+id/arvtimeET2"
+        app:layout_constraintTop_toBottomOf="@+id/timeStampTV1" />
+
+    <TextView
+        android:id="@+id/sourceTV2"
+        android:layout_width="50dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/sourceTV3"
+        app:layout_constraintEnd_toStartOf="@+id/materialTV2"
+        app:layout_constraintStart_toEndOf="@+id/timeStampTV2"
+        app:layout_constraintTop_toBottomOf="@+id/sourceTV1" />
+
+    <TextView
+        android:id="@+id/materialTV2"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/materialTV3"
+        app:layout_constraintEnd_toStartOf="@+id/weightTV2"
+        app:layout_constraintStart_toEndOf="@+id/sourceTV2"
+        app:layout_constraintTop_toBottomOf="@+id/materialTV1" />
+
+    <TextView
+        android:id="@+id/weightTV2"
+        android:layout_width="70dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/weightTV3"
+        app:layout_constraintEnd_toStartOf="@+id/destinationTV2"
+        app:layout_constraintStart_toEndOf="@+id/materialTV2"
+        app:layout_constraintTop_toBottomOf="@+id/weightTV1" />
+
+    <TextView
+        android:id="@+id/destinationTV2"
+        android:layout_width="50dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/destinationTV3"
+        app:layout_constraintEnd_toStartOf="@+id/APTV2"
+        app:layout_constraintStart_toEndOf="@+id/weightTV2"
+        app:layout_constraintTop_toBottomOf="@+id/destinationTV1" />
+
+    <EditText
+        android:id="@+id/APTV2"
+        android:layout_width="50dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/APTV3"
+        app:layout_constraintEnd_toStartOf="@+id/LPTV2"
+        app:layout_constraintStart_toEndOf="@+id/destinationTV2"
+        app:layout_constraintTop_toBottomOf="@+id/APTV1" />
+
+    <EditText
+        android:id="@+id/LPTV2"
+        android:layout_width="50dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/LPTV3"
+        app:layout_constraintEnd_toStartOf="@+id/rateTV2"
+        app:layout_constraintStart_toEndOf="@+id/APTV2"
+        app:layout_constraintTop_toBottomOf="@+id/LPTV1" />
+
+    <EditText
+        android:id="@+id/rateTV2"
+        android:layout_width="70dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/rateTV3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/LPTV2"
+        app:layout_constraintTop_toBottomOf="@+id/rateTV1" />
+
+    <TextView
+        android:id="@+id/arvtimeET3"
+        android:layout_width="140dp"
+        android:layout_height="36dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="arvTime3"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/arvtimeET4"
+        app:layout_constraintEnd_toStartOf="@+id/timeStampTV3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/arvtimeET2" />
+
+    <TextView
+        android:id="@+id/timeStampTV3"
+        android:layout_width="140dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/timeStampTV4"
+        app:layout_constraintEnd_toStartOf="@+id/sourceTV3"
+        app:layout_constraintStart_toEndOf="@+id/arvtimeET3"
+        app:layout_constraintTop_toBottomOf="@+id/timeStampTV2" />
+
+    <TextView
+        android:id="@+id/sourceTV3"
+        android:layout_width="50dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/sourceTV4"
+        app:layout_constraintEnd_toStartOf="@+id/materialTV3"
+        app:layout_constraintStart_toEndOf="@+id/timeStampTV3"
+        app:layout_constraintTop_toBottomOf="@+id/sourceTV2" />
+
+    <TextView
+        android:id="@+id/materialTV3"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/materialTV4"
+        app:layout_constraintEnd_toStartOf="@+id/weightTV3"
+        app:layout_constraintStart_toEndOf="@+id/sourceTV3"
+        app:layout_constraintTop_toBottomOf="@+id/materialTV2" />
+
+    <TextView
+        android:id="@+id/weightTV3"
+        android:layout_width="70dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/weightTV4"
+        app:layout_constraintEnd_toStartOf="@+id/destinationTV3"
+        app:layout_constraintStart_toEndOf="@+id/materialTV3"
+        app:layout_constraintTop_toBottomOf="@+id/weightTV2" />
+
+    <TextView
+        android:id="@+id/destinationTV3"
+        android:layout_width="50dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/destinationTV4"
+        app:layout_constraintEnd_toStartOf="@+id/APTV3"
+        app:layout_constraintStart_toEndOf="@+id/weightTV3"
+        app:layout_constraintTop_toBottomOf="@+id/destinationTV2" />
+
+    <EditText
+        android:id="@+id/APTV3"
+        android:layout_width="50dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/APTV4"
+        app:layout_constraintEnd_toStartOf="@+id/LPTV3"
+        app:layout_constraintStart_toEndOf="@+id/destinationTV3"
+        app:layout_constraintTop_toBottomOf="@+id/APTV2" />
+
+    <EditText
+        android:id="@+id/LPTV3"
+        android:layout_width="50dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/LPTV4"
+        app:layout_constraintEnd_toStartOf="@+id/rateTV3"
+        app:layout_constraintStart_toEndOf="@+id/APTV3"
+        app:layout_constraintTop_toBottomOf="@+id/LPTV2" />
+
+    <EditText
+        android:id="@+id/rateTV3"
+        android:layout_width="70dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/rateTV4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/LPTV3"
+        app:layout_constraintTop_toBottomOf="@+id/rateTV2" />
+
+    <TextView
+        android:id="@+id/arvtimeET4"
+        android:layout_width="140dp"
+        android:layout_height="36dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="arvTime4"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/arvtimeET5"
+        app:layout_constraintEnd_toStartOf="@+id/timeStampTV4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/arvtimeET3" />
+
+    <TextView
+        android:id="@+id/timeStampTV4"
+        android:layout_width="140dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/timeStampTV5"
+        app:layout_constraintEnd_toStartOf="@+id/sourceTV4"
+        app:layout_constraintStart_toEndOf="@+id/arvtimeET4"
+        app:layout_constraintTop_toBottomOf="@+id/timeStampTV3" />
+
+    <TextView
+        android:id="@+id/sourceTV4"
+        android:layout_width="50dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/sourceTV5"
+        app:layout_constraintEnd_toStartOf="@+id/materialTV4"
+        app:layout_constraintStart_toEndOf="@+id/timeStampTV4"
+        app:layout_constraintTop_toBottomOf="@+id/sourceTV3" />
+
+    <TextView
+        android:id="@+id/materialTV4"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/materialTV5"
+        app:layout_constraintEnd_toStartOf="@+id/weightTV4"
+        app:layout_constraintStart_toEndOf="@+id/sourceTV4"
+        app:layout_constraintTop_toBottomOf="@+id/materialTV3" />
+
+    <TextView
+        android:id="@+id/weightTV4"
+        android:layout_width="70dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/weightTV5"
+        app:layout_constraintEnd_toStartOf="@+id/destinationTV4"
+        app:layout_constraintStart_toEndOf="@+id/materialTV4"
+        app:layout_constraintTop_toBottomOf="@+id/weightTV3" />
+
+    <TextView
+        android:id="@+id/destinationTV4"
+        android:layout_width="50dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/destinationTV5"
+        app:layout_constraintEnd_toStartOf="@+id/APTV4"
+        app:layout_constraintStart_toEndOf="@+id/weightTV4"
+        app:layout_constraintTop_toBottomOf="@+id/destinationTV3" />
+
+    <EditText
+        android:id="@+id/APTV4"
+        android:layout_width="50dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/APTV5"
+        app:layout_constraintEnd_toStartOf="@+id/LPTV4"
+        app:layout_constraintStart_toEndOf="@+id/destinationTV4"
+        app:layout_constraintTop_toBottomOf="@+id/APTV3" />
+
+    <EditText
+        android:id="@+id/LPTV4"
+        android:layout_width="50dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/LPTV5"
+        app:layout_constraintEnd_toStartOf="@+id/rateTV4"
+        app:layout_constraintStart_toEndOf="@+id/APTV4"
+        app:layout_constraintTop_toBottomOf="@+id/LPTV3" />
+
+    <EditText
+        android:id="@+id/rateTV4"
+        android:layout_width="70dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/rateTV5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/LPTV4"
+        app:layout_constraintTop_toBottomOf="@+id/rateTV3" />
+
+    <TextView
+        android:id="@+id/arvtimeET5"
+        android:layout_width="140dp"
+        android:layout_height="36dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="arvTime5"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/arvtimeET6"
+        app:layout_constraintEnd_toStartOf="@+id/timeStampTV5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/arvtimeET4" />
+
+    <TextView
+        android:id="@+id/timeStampTV5"
+        android:layout_width="140dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/timeStampTV6"
+        app:layout_constraintEnd_toStartOf="@+id/sourceTV5"
+        app:layout_constraintStart_toEndOf="@+id/arvtimeET5"
+        app:layout_constraintTop_toBottomOf="@+id/timeStampTV4" />
+
+    <TextView
+        android:id="@+id/sourceTV5"
+        android:layout_width="50dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/sourceTV6"
+        app:layout_constraintEnd_toStartOf="@+id/materialTV5"
+        app:layout_constraintStart_toEndOf="@+id/timeStampTV5"
+        app:layout_constraintTop_toBottomOf="@+id/sourceTV4" />
+
+    <TextView
+        android:id="@+id/materialTV5"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/materialTV6"
+        app:layout_constraintEnd_toStartOf="@+id/weightTV5"
+        app:layout_constraintStart_toEndOf="@+id/sourceTV5"
+        app:layout_constraintTop_toBottomOf="@+id/materialTV4" />
+
+    <TextView
+        android:id="@+id/weightTV5"
+        android:layout_width="70dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/weightTV6"
+        app:layout_constraintEnd_toStartOf="@+id/destinationTV5"
+        app:layout_constraintStart_toEndOf="@+id/materialTV5"
+        app:layout_constraintTop_toBottomOf="@+id/weightTV4" />
+
+    <TextView
+        android:id="@+id/destinationTV5"
+        android:layout_width="50dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/destinationTV6"
+        app:layout_constraintEnd_toStartOf="@+id/APTV5"
+        app:layout_constraintStart_toEndOf="@+id/weightTV5"
+        app:layout_constraintTop_toBottomOf="@+id/destinationTV4" />
+
+    <EditText
+        android:id="@+id/APTV5"
+        android:layout_width="50dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/APTV6"
+        app:layout_constraintEnd_toStartOf="@+id/LPTV5"
+        app:layout_constraintStart_toEndOf="@+id/destinationTV5"
+        app:layout_constraintTop_toBottomOf="@+id/APTV4" />
+
+    <EditText
+        android:id="@+id/LPTV5"
+        android:layout_width="50dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/LPTV6"
+        app:layout_constraintEnd_toStartOf="@+id/rateTV5"
+        app:layout_constraintStart_toEndOf="@+id/APTV5"
+        app:layout_constraintTop_toBottomOf="@+id/LPTV4" />
+
+    <EditText
+        android:id="@+id/rateTV5"
+        android:layout_width="70dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/rateTV6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/LPTV5"
+        app:layout_constraintTop_toBottomOf="@+id/rateTV4" />
+
+    <TextView
+        android:id="@+id/arvtimeET6"
+        android:layout_width="140dp"
+        android:layout_height="36dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="arvTime6"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/arvtimeET7"
+        app:layout_constraintEnd_toStartOf="@+id/timeStampTV6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/arvtimeET5" />
+
+    <TextView
+        android:id="@+id/timeStampTV6"
+        android:layout_width="140dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/timeStampTV7"
+        app:layout_constraintEnd_toStartOf="@+id/sourceTV6"
+        app:layout_constraintStart_toEndOf="@+id/arvtimeET6"
+        app:layout_constraintTop_toBottomOf="@+id/timeStampTV5" />
+
+    <TextView
+        android:id="@+id/sourceTV6"
+        android:layout_width="50dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/sourceTV7"
+        app:layout_constraintEnd_toStartOf="@+id/materialTV6"
+        app:layout_constraintStart_toEndOf="@+id/timeStampTV6"
+        app:layout_constraintTop_toBottomOf="@+id/sourceTV5" />
+
+    <TextView
+        android:id="@+id/materialTV6"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/materialTV7"
+        app:layout_constraintEnd_toStartOf="@+id/weightTV6"
+        app:layout_constraintStart_toEndOf="@+id/sourceTV6"
+        app:layout_constraintTop_toBottomOf="@+id/materialTV5" />
+
+    <TextView
+        android:id="@+id/weightTV6"
+        android:layout_width="70dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/weightTV7"
+        app:layout_constraintEnd_toStartOf="@+id/destinationTV6"
+        app:layout_constraintStart_toEndOf="@+id/materialTV6"
+        app:layout_constraintTop_toBottomOf="@+id/weightTV5" />
+
+    <TextView
+        android:id="@+id/destinationTV6"
+        android:layout_width="50dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/destinationTV7"
+        app:layout_constraintEnd_toStartOf="@+id/APTV6"
+        app:layout_constraintStart_toEndOf="@+id/weightTV6"
+        app:layout_constraintTop_toBottomOf="@+id/destinationTV5" />
+
+    <EditText
+        android:id="@+id/APTV6"
+        android:layout_width="50dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/APTV7"
+        app:layout_constraintEnd_toStartOf="@+id/LPTV6"
+        app:layout_constraintStart_toEndOf="@+id/destinationTV6"
+        app:layout_constraintTop_toBottomOf="@+id/APTV5" />
+
+    <EditText
+        android:id="@+id/LPTV6"
+        android:layout_width="50dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/LPTV7"
+        app:layout_constraintEnd_toStartOf="@+id/rateTV6"
+        app:layout_constraintStart_toEndOf="@+id/APTV6"
+        app:layout_constraintTop_toBottomOf="@+id/LPTV5" />
+
+    <EditText
+        android:id="@+id/rateTV6"
+        android:layout_width="70dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/rateTV7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/LPTV6"
+        app:layout_constraintTop_toBottomOf="@+id/rateTV5" />
+
+    <TextView
+        android:id="@+id/arvtimeET7"
+        android:layout_width="140dp"
+        android:layout_height="36dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="arvTime7"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/arvtimeET8"
+        app:layout_constraintEnd_toStartOf="@+id/timeStampTV7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/arvtimeET6" />
+
+    <TextView
+        android:id="@+id/timeStampTV7"
+        android:layout_width="140dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/timeStampTV8"
+        app:layout_constraintEnd_toStartOf="@+id/sourceTV7"
+        app:layout_constraintStart_toEndOf="@+id/arvtimeET7"
+        app:layout_constraintTop_toBottomOf="@+id/timeStampTV6" />
+
+    <TextView
+        android:id="@+id/sourceTV7"
+        android:layout_width="50dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/sourceTV8"
+        app:layout_constraintEnd_toStartOf="@+id/materialTV7"
+        app:layout_constraintStart_toEndOf="@+id/timeStampTV7"
+        app:layout_constraintTop_toBottomOf="@+id/sourceTV6" />
+
+    <TextView
+        android:id="@+id/materialTV7"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/materialTV8"
+        app:layout_constraintEnd_toStartOf="@+id/weightTV7"
+        app:layout_constraintStart_toEndOf="@+id/sourceTV7"
+        app:layout_constraintTop_toBottomOf="@+id/materialTV6" />
+
+    <TextView
+        android:id="@+id/weightTV7"
+        android:layout_width="70dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/weightTV8"
+        app:layout_constraintEnd_toStartOf="@+id/destinationTV7"
+        app:layout_constraintStart_toEndOf="@+id/materialTV7"
+        app:layout_constraintTop_toBottomOf="@+id/weightTV6" />
+
+    <TextView
+        android:id="@+id/destinationTV7"
+        android:layout_width="50dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/destinationTV8"
+        app:layout_constraintEnd_toStartOf="@+id/APTV7"
+        app:layout_constraintStart_toEndOf="@+id/weightTV7"
+        app:layout_constraintTop_toBottomOf="@+id/destinationTV6" />
+
+    <EditText
+        android:id="@+id/APTV7"
+        android:layout_width="50dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/APTV8"
+        app:layout_constraintEnd_toStartOf="@+id/LPTV7"
+        app:layout_constraintStart_toEndOf="@+id/destinationTV7"
+        app:layout_constraintTop_toBottomOf="@+id/APTV6" />
+
+    <EditText
+        android:id="@+id/LPTV7"
+        android:layout_width="50dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/LPTV8"
+        app:layout_constraintEnd_toStartOf="@+id/rateTV7"
+        app:layout_constraintStart_toEndOf="@+id/APTV7"
+        app:layout_constraintTop_toBottomOf="@+id/LPTV6" />
+
+    <EditText
+        android:id="@+id/rateTV7"
+        android:layout_width="70dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/rateTV8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/LPTV7"
+        app:layout_constraintTop_toBottomOf="@+id/rateTV6" />
+
+    <TextView
+        android:id="@+id/arvtimeET8"
+        android:layout_width="140dp"
+        android:layout_height="36dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="arvTime8"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/timeStampTV8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/arvtimeET7" />
+
+    <TextView
+        android:id="@+id/timeStampTV8"
+        android:layout_width="140dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/sourceTV8"
+        app:layout_constraintStart_toEndOf="@+id/arvtimeET8"
+        app:layout_constraintTop_toBottomOf="@+id/timeStampTV7" />
+
+    <TextView
+        android:id="@+id/sourceTV8"
+        android:layout_width="50dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/materialTV8"
+        app:layout_constraintStart_toEndOf="@+id/timeStampTV8"
+        app:layout_constraintTop_toBottomOf="@+id/sourceTV7" />
+
+    <TextView
+        android:id="@+id/materialTV8"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/weightTV8"
+        app:layout_constraintStart_toEndOf="@+id/sourceTV8"
+        app:layout_constraintTop_toBottomOf="@+id/materialTV7" />
+
+    <TextView
+        android:id="@+id/weightTV8"
+        android:layout_width="70dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/destinationTV8"
+        app:layout_constraintStart_toEndOf="@+id/materialTV8"
+        app:layout_constraintTop_toBottomOf="@+id/weightTV7" />
+
+    <TextView
+        android:id="@+id/destinationTV8"
+        android:layout_width="50dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/APTV8"
+        app:layout_constraintStart_toEndOf="@+id/weightTV8"
+        app:layout_constraintTop_toBottomOf="@+id/destinationTV7" />
+
+    <EditText
+        android:id="@+id/APTV8"
+        android:layout_width="50dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/LPTV8"
+        app:layout_constraintStart_toEndOf="@+id/destinationTV8"
+        app:layout_constraintTop_toBottomOf="@+id/APTV7" />
+
+    <EditText
+        android:id="@+id/LPTV8"
+        android:layout_width="50dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/rateTV8"
+        app:layout_constraintStart_toEndOf="@+id/APTV8"
+        app:layout_constraintTop_toBottomOf="@+id/LPTV7" />
+
+    <EditText
+        android:id="@+id/rateTV8"
+        android:layout_width="70dp"
+        android:layout_height="36dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/LPTV8"
+        app:layout_constraintTop_toBottomOf="@+id/rateTV7" />
+
+    <TextView
+        android:id="@+id/textViewInstructions5"
+        android:layout_width="342dp"
+        android:layout_height="51dp"
+        android:ems="10"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.074" />
+
+    <ImageView
+        android:id="@+id/ImageView5"
+        android:layout_width="961dp"
+        android:layout_height="115dp"
+        android:contentDescription="@string/hv5"
+        android:scaleType="fitXY"
+        android:src="@drawable/header_graphic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/messageBubble5"
+        android:layout_width="54dp"
+        android:layout_height="49dp"
+        android:alpha=".50"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.878"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.029"
+        app:srcCompat="@drawable/message_bubble" />
+
+    <TextView
+        android:id="@+id/statusLabl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="112dp"
+        android:background="#e9ab90"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/textview"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/homeView5"
+        android:layout_width="54dp"
+        android:layout_height="49dp"
+        android:alpha=".50"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.939"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.028"
+        app:srcCompat="@drawable/home_house" />
+
+    <TextClock
+        android:id="@+id/txtClock"
+        android:layout_width="190dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        app:layout_constraintVertical_bias="0.040"
+        app:layout_constraintHorizontal_bias="0.80"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

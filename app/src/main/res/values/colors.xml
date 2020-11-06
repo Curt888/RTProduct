@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#ce0101</color>
+    <color name="colorPrimaryDark">#9C0101</color>
+    <color name="colorAccent">#606060</color>
+    <color name="background">#FFFFFF</color> <!-- #E6E6E6  -->
+    <color name="gridColor">#63b5f8</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorGradStart">#DD0000</color>
+    <color name="colorGradEnd">#990000</color>
+    <color name="colorHeadText">#FFFFFF</color>
+    <color name="colorHeadTint">#FFFFFF</color>
+
+    <color name="colorBackground">#747D7D</color>
+    <color name="colorBackgroundStart">#646D6D</color>
+    <color name="colorBackgroundEnd">#414A4A</color>
+
+    <color name="colorButtonBackground">#ffe7e7e7</color>
+    <color name="colorButtonStroke">#ffc6c3c6</color>
+
+    <color name="colorDisabled">#80808080</color>
+</resources>
