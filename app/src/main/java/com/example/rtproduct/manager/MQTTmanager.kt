@@ -2,8 +2,6 @@ package com.example.rtproduct.manager
 
 import android.content.Context
 import android.util.Log
-import com.example.rtproduct.R
-import com.example.rtproduct.SwarmSSLSocketFactory
 import com.example.rtproduct.protocols.UIUpdaterInterface
 import org.eclipse.paho.android.service.MqttAndroidClient
 import org.eclipse.paho.client.mqttv3.*
@@ -37,16 +35,17 @@ class MQTTmanager (val connectionParams: MQTTConnectionParams, val context: Cont
     }
     fun connect(){
         val mqttConnectOptions = MqttConnectOptions()
-        val sslSocketFatory = SwarmSSLSocketFactory(
-            context,
-            R.raw.ca,
-            R.raw.full,
-            R.string.swarm_jks_pass
-        );
-        mqttConnectOptions.socketFactory = sslSocketFatory;
+//        val sslSocketFatory = SwarmSSLSocketFactory(
+//            context,
+//            R.raw.ca,
+//            R.raw.full,
+//            R.string.swarm_jks_pass
+//        );
+//        mqttConnectOptions.socketFactory = sslSocketFatory;
 
         mqttConnectOptions.setAutomaticReconnect(true)
-        mqttConnectOptions.setCleanSession(true)
+        mqttConnectOptions.setCleanSession(false)
+//        mqttConnectOptions.setCleanSession(true)
 //        mqttConnectOptions.setUserName(this.connectionParams.username)
 //        mqttConnectOptions.setPassword(this.connectionParams.password.toCharArray())
         try
@@ -56,7 +55,7 @@ class MQTTmanager (val connectionParams: MQTTConnectionParams, val context: Cont
                 override fun onSuccess(asyncActionToken:IMqttToken) {
                     val disconnectedBufferOptions = DisconnectedBufferOptions()
                     disconnectedBufferOptions.setBufferEnabled(true)
-                    disconnectedBufferOptions.setBufferSize(10)
+                    disconnectedBufferOptions.setBufferSize(100)
                     disconnectedBufferOptions.setPersistBuffer(false)
                     disconnectedBufferOptions.setDeleteOldestMessages(false)
                     client.setBufferOpts(disconnectedBufferOptions)

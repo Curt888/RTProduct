@@ -23,7 +23,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 class SecondActivity : AppCompatActivity(), UIUpdaterInterface {
-
+    var mqttManager: MQTTmanager? = null
     val sdf = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.mmm'Z'", Locale.getDefault())
     val currentDateandTime: String = sdf.format(Date())
 
@@ -171,11 +171,10 @@ class SecondActivity : AppCompatActivity(), UIUpdaterInterface {
             "/agg_scale/+/+/veh/agg/${GlobalClass.truckComp}/${GlobalClass.truckType}/${GlobalClass.TruckNo}/status",
             "/vehicle/agg/${GlobalClass.TruckNo}/call_out"
         )
-
-        var connectionParams =
-            MQTTConnectionParams("RTP1", GlobalClass.MqttHost.toString(), topics, "", "")
-        GlobalClass.mqttManager = MQTTmanager(connectionParams, applicationContext, this)
-        GlobalClass.mqttManager?.connect()
+        var host = "tcp://10.2.203.198:1883"
+        var connectionParams = MQTTConnectionParams("RTP1", host, topics, "", "")
+        mqttManager = MQTTmanager(connectionParams, applicationContext, this)
+        mqttManager?.connect()
 }
     override fun resetUIWithConnection(status: Boolean) {
         if (status) {
@@ -246,7 +245,7 @@ class SecondActivity : AppCompatActivity(), UIUpdaterInterface {
     private fun createJsonData() {
         val TextMessage = Textmessage("$currentDateandTime", "${GlobalClass.TruckNo}", GlobalClass.sendMessage.toString())
         var mymessage = Textadapter.toJson(TextMessage)
-        GlobalClass.mqttManager?.publish("/vehicle/agg/${GlobalClass.TruckNo}/call_out", "$mymessage")
+        mqttManager?.publish("/vehicle/agg/${GlobalClass.TruckNo}/call_out", "$mymessage")
     }
 
     fun StatusReady() {

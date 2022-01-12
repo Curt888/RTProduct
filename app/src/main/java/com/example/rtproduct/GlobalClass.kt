@@ -1,18 +1,17 @@
 package com.example.rtproduct
 
 import android.app.Application
-import com.example.rtproduct.manager.MQTTmanager
 
 class GlobalClass() : Application() {
     companion object {
-        var mqttManager: MQTTmanager? = null
+
         var version: String? = "22"
-        var MqttHost: String? = null
-        var truckComp: String? = null
-        var truckType: String? = null
-        var TruckNo: String? = null
-        var plantCode: String? = null
-        var scaleCode: String? = null
+        var MqttHost: String? = "tcp://10.2.203.198:1883"
+        var truckComp: String? = "10"
+        var truckType: String? = "1"
+        var TruckNo: String? = "777"
+        var plantCode: String? = "10"
+        var scaleCode: String? = "01"
         var DialogPassword: String? = null
         var topicMessage: String? = null
         var CallOutMessage3: String? = null

@@ -24,6 +24,7 @@ class ThridActivity : AppCompatActivity(), UIUpdaterInterface {
     data class WeightMsg (val createdTimeUTC: String, val weight: String = "")
     data class mqttMsg (val msg: String = "")
 
+    var mqttManager: MQTTmanager? = null
     var Product:String? = null
     var ProductSubmit:String? = null
     val sdf = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.mmm'Z'", Locale.getDefault())
@@ -136,10 +137,10 @@ class ThridActivity : AppCompatActivity(), UIUpdaterInterface {
             "/agg_scale/+/+/veh/agg/${GlobalClass.truckComp}/${GlobalClass.truckType}/${GlobalClass.TruckNo}/status",
             "/vehicle/agg/${GlobalClass.TruckNo}/call_out"
         )
-
-        var connectionParams = MQTTConnectionParams("RTP1", GlobalClass.MqttHost.toString(), topics, "", "")
-        GlobalClass.mqttManager = MQTTmanager(connectionParams, applicationContext, this)
-        GlobalClass.mqttManager?.connect()
+        var host = "tcp://10.2.203.198:1883"
+        var connectionParams = MQTTConnectionParams("RTP1", host, topics, "", "")
+        mqttManager = MQTTmanager(connectionParams, applicationContext, this)
+        mqttManager?.connect()
 
         MessageView.setOnClickListener() {
             StatusDone()
@@ -409,7 +410,7 @@ class ThridActivity : AppCompatActivity(), UIUpdaterInterface {
     private fun createJsonData() {
         val ScaleOutMsg = scaleOutMsg("$currentDateandTime", "${GlobalClass.Weight}", "$Product", 0 )
         var mymessage = scaleOutadapter.toJson(ScaleOutMsg)
-        GlobalClass.mqttManager?.publish("/vehicle/agg/${GlobalClass.truckComp}/${GlobalClass.truckType}/${GlobalClass.TruckNo}/scale_out", "$mymessage")
+        mqttManager?.publish("/vehicle/agg/${GlobalClass.truckComp}/${GlobalClass.truckType}/${GlobalClass.TruckNo}/scale_out", "$mymessage")
         System.err.println("Activity 3 Parse")
         System.err.println(GlobalClass.plantCode)
         System.err.println(GlobalClass.scaleCode)

@@ -11,6 +11,8 @@ import kotlinx.android.synthetic.main.activity_settings.*
 
 class SettingsActivity : AppCompatActivity(), UIUpdaterInterface {
 
+    var mqttManager: MQTTmanager? = null
+
     override fun resetUIWithConnection(status: Boolean) {
         if (status) {
             updateStatusViewWith("Connected")
@@ -43,10 +45,10 @@ class SettingsActivity : AppCompatActivity(), UIUpdaterInterface {
 //            "/agg_scale/+/+/veh/agg/${GlobalClass.truckComp}/${GlobalClass.truckType}/${GlobalClass.TruckNo}/status",
             "/vehicle/agg/${GlobalClass.TruckNo}/call_out"
         )
-
-        var connectionParams = MQTTConnectionParams("RTP1", GlobalClass.MqttHost.toString(), topics, "", "")
-        GlobalClass.mqttManager = MQTTmanager(connectionParams, applicationContext, this)
-        GlobalClass.mqttManager?.connect()
+        var host = "tcp://10.2.203.198:1883"
+        var connectionParams = MQTTConnectionParams("RTP1", host, topics, "", "")
+        mqttManager = MQTTmanager(connectionParams, applicationContext, this)
+        mqttManager?.connect()
 
         //Submitting to Global Class and the database
         SunmitBtn.setOnClickListener() {

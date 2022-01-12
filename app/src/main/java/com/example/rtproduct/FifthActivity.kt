@@ -20,6 +20,7 @@ import java.util.*
 
 class FifthActivity : AppCompatActivity(), UIUpdaterInterface {
 
+    var mqttManager: MQTTmanager? = null
     val tct = SimpleDateFormat("MM-dd-yy HH:mm", Locale.getDefault())
     var currentDate: String = tct.format(Date())
 
@@ -41,16 +42,12 @@ class FifthActivity : AppCompatActivity(), UIUpdaterInterface {
 //            "/agg_scale/+/+/veh/agg/${GlobalClass.truckComp}/${GlobalClass.truckType}/${GlobalClass.TruckNo}/status",
             "/vehicle/agg/${GlobalClass.TruckNo}/call_out"
         )
-
+        var host = "tcp://10.2.203.198:1883"
         var connectionParams = MQTTConnectionParams(
-            "RTP1",
-            GlobalClass.MqttHost.toString(),
-            topics,
-            "",
-            ""
+            "RTP1", host, topics, "", ""
         )
-        GlobalClass.mqttManager = MQTTmanager(connectionParams, applicationContext, this)
-        GlobalClass.mqttManager?.connect()
+        mqttManager = MQTTmanager(connectionParams, applicationContext, this)
+        mqttManager?.connect()
 
         homeView5.setOnClickListener {
             StatusDone()
