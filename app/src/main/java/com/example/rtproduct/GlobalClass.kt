@@ -10,7 +10,7 @@ class GlobalClass() : Application() {
         var truckComp: String? = "10"
         var truckType: String? = "1"
         var TruckNo: String? = "777"
-        var plantCode: String? = "10"
+        var plantCode: String? = "50"
         var scaleCode: String? = "01"
         var DialogPassword: String? = null
         var topicMessage: String? = null
@@ -18,7 +18,7 @@ class GlobalClass() : Application() {
         var CallOutMessage4: String? = null
         var CallOutMessage5: String? = null
         var Retry:String? = null
-        var Weight:String? = "5.00"
+        var Weight:String? = "39.80"
         var sendMessage: String? = null
         var i : Int? = 0
 

@@ -171,8 +171,8 @@ class SecondActivity : AppCompatActivity(), UIUpdaterInterface {
             "/agg_scale/+/+/veh/agg/${GlobalClass.truckComp}/${GlobalClass.truckType}/${GlobalClass.TruckNo}/status",
             "/vehicle/agg/${GlobalClass.TruckNo}/call_out"
         )
-        var host = "tcp://10.2.203.198:1883"
-        var connectionParams = MQTTConnectionParams("RTP1", host, topics, "", "")
+
+        var connectionParams = MQTTConnectionParams("RTP1", GlobalClass.MqttHost.toString(), topics, "", "")
         mqttManager = MQTTmanager(connectionParams, applicationContext, this)
         mqttManager?.connect()
 }
@@ -199,7 +199,6 @@ class SecondActivity : AppCompatActivity(), UIUpdaterInterface {
         val timer = object : CountDownTimer(1500, 1000) {
             override fun onTick(millisUntilFinished: Long) {
             }
-
             override fun onFinish() {
                 tvReady.setText("")
             }
@@ -218,12 +217,12 @@ class SecondActivity : AppCompatActivity(), UIUpdaterInterface {
             GlobalClass.plantCode = result.get(2)
             GlobalClass.scaleCode = result.get(3)
             GlobalClass.topicMessage = result.last()
-            System.err.println("Activity 2")
             result.forEach {println(it) }
-            System.err.println(GlobalClass.plantCode)
-            System.err.println(GlobalClass.scaleCode)
-        } else
+        } else if (result.last() == "metrics") {
             GlobalClass.topicMessage = result.last()
+        }else
+            GlobalClass.topicMessage = result.last()
+
     }
 
 

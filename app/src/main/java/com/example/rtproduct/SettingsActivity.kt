@@ -45,8 +45,7 @@ class SettingsActivity : AppCompatActivity(), UIUpdaterInterface {
 //            "/agg_scale/+/+/veh/agg/${GlobalClass.truckComp}/${GlobalClass.truckType}/${GlobalClass.TruckNo}/status",
             "/vehicle/agg/${GlobalClass.TruckNo}/call_out"
         )
-        var host = "tcp://10.2.203.198:1883"
-        var connectionParams = MQTTConnectionParams("RTP1", host, topics, "", "")
+        var connectionParams = MQTTConnectionParams("RTP1", GlobalClass.MqttHost.toString(), topics, "", "")
         mqttManager = MQTTmanager(connectionParams, applicationContext, this)
         mqttManager?.connect()
 

@@ -37,9 +37,6 @@ class ThridActivity : AppCompatActivity(), UIUpdaterInterface {
     val scaleOutadapter: JsonAdapter<scaleOutMsg> = moshi.adapter(scaleOutMsg::class.java)
     val msgAdapter : JsonAdapter<mqttMsg> = moshi.adapter(mqttMsg::class.java)
 
-//    val moshiDate = Moshi.Builder().add(Date::class.java, Rfc3339DateJsonAdapter()).build()
-//    val Dateadapter:JsonAdapter<Date> = moshi.adapter (Date::class.java)
-
     override fun resetUIWithConnection(status: Boolean) {
         if (status) {
             updateStatusViewWith("Connected")
@@ -73,12 +70,12 @@ class ThridActivity : AppCompatActivity(), UIUpdaterInterface {
             GlobalClass.plantCode = result.get(2)
             GlobalClass.scaleCode = result.get(3)
             GlobalClass.topicMessage = result.last()
-            System.err.println("Activity 3")
             result.forEach {
-                println(it)}
-            System.err.println(GlobalClass.plantCode)
-            System.err.println(GlobalClass.scaleCode)
-        } else
+                println(it)
+            }
+        } else if (result.last() == "metrics") {
+            GlobalClass.topicMessage = result.last()
+        }else
             GlobalClass.topicMessage = result.last()
     }
 
@@ -87,12 +84,11 @@ class ThridActivity : AppCompatActivity(), UIUpdaterInterface {
         if (GlobalClass.topicMessage == "metrics") {
             val message: WeightMsg? = weightAdapter.fromJson(inData)
             if (message != null) {
-                if (message.weight.toFloat() > 5.00) {
+                if (message.weight.toFloat() > 5.00f) {
                     tvWeight.text = df.format(message.weight.toFloat())
                     GlobalClass.Weight = df.format(message.weight)
                 } else if (message.weight.toFloat() < 5.00f) {
-                    StatusDone()
-                }
+                    StatusDone()}
             }
         }else if(GlobalClass.topicMessage == "scale_out") {
             val message1: scaleOutMsg? = scaleOutadapter.fromJson(inData)
@@ -121,7 +117,7 @@ class ThridActivity : AppCompatActivity(), UIUpdaterInterface {
                     GlobalClass.CallOutMessage3 = message3.msg
                 }
             }
-        }
+        }else (System.err.println("Last Nothing"))
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -137,8 +133,8 @@ class ThridActivity : AppCompatActivity(), UIUpdaterInterface {
             "/agg_scale/+/+/veh/agg/${GlobalClass.truckComp}/${GlobalClass.truckType}/${GlobalClass.TruckNo}/status",
             "/vehicle/agg/${GlobalClass.TruckNo}/call_out"
         )
-        var host = "tcp://10.2.203.198:1883"
-        var connectionParams = MQTTConnectionParams("RTP1", host, topics, "", "")
+
+        var connectionParams = MQTTConnectionParams("RTP1", GlobalClass.MqttHost.toString(), topics, "", "")
         mqttManager = MQTTmanager(connectionParams, applicationContext, this)
         mqttManager?.connect()
 
@@ -251,7 +247,7 @@ class ThridActivity : AppCompatActivity(), UIUpdaterInterface {
             ProductBtn3.setEnabled(false)
             ProductBtn4.setEnabled(false)
 
-            val timer = object : CountDownTimer(30000, 1000) {
+            val timer = object : CountDownTimer(15000, 1000) {
                 override fun onTick(millisUntilFinished: Long) {
                     SubmitBtn.setEnabled(false)
                     tvProduct.text = "$ProductSubmit is Submitted"
@@ -282,7 +278,7 @@ class ThridActivity : AppCompatActivity(), UIUpdaterInterface {
                         ProductBtn4.setChecked(false)
                         SubmitBtn.setChecked(false)
                         SubmitBtn.visibility = View.GONE
-                        tvProduct.text = "Try Again"
+                        tvProduct.text = "No Reply: Try Again"
                         SubmitBtn.setTextColor(Color.RED)
                         SubmitBtn.setBackgroundResource(R.drawable.button_normal)
 
@@ -516,7 +512,6 @@ class ThridActivity : AppCompatActivity(), UIUpdaterInterface {
         finish()
         startActivity(intent)
     }
-
 }
 
 
